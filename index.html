@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mon Profil</title>
+    <style>
+      h1 {
+        color: blue;
+      }
+      body {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h1>Cheikh Ahmed Tidiane Sene</h1>
+    <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=CATS+3" alt="logo de l'entreprise CATS 3">
+    <p>Je veux devenir codeur pour developper des logiciels, des applications et des sites web.</p>
+    
+    <h2>Mes objectifs.</h2>
+    <ul>
+      <li>CATS 3 <strong>Tech</strong></li>
+      <li>CATS 3 <strong>Défense</strong></li>
+      <li>CATS 3 <strong>Santé</strong></li>
+    </ul>
+    
+    <p id="statut">Découvrez mon futur projet :</p>
+    <a href="https://www.cats3.com">Visiter le site de CATS 3.</a>
+    
+    <button onclick="lancerprojet()">Lancer le projet</button>
+
+    <script>
+      function lancerprojet() {
+        // On cible l'id "statut" et on change son texte
+        document.getElementById("statut").textContent = "Le projet CATS 3 est en cours de déploiement...";
+      }
+    </script>
+    
+  </body>
+</html>

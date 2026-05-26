@@ -1,61 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
-    <title>Mon Profil</title>
-    <style>.carte {
-text-align: center;
-  max-width: 600px;        /* La boîte ne dépassera pas 600 pixels de large */
-  margin: 50px auto;       /* 50px d'espace en haut/bas, et CENTRÉ horizontalement */
-  background-color: white; /* Le fond de ta carte sera tout blanc */
-  padding: 30px;           /* Du rembourrage pour que le texte ne colle pas aux bords */
-  border-radius: 12px;     /* Des bords arrondis élégants */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Une ombre légère pour donner du relief */
-}h1 {
-  color: blue;
-}img {
-  display: block;
-  margin: 0 auto 20px auto;
-  border-radius: 8px; /* Ça arrondira légèrement les coins du logo */
-}
-body {
-  background-color: #f8fafc; /* Gris clair moderne */
-  font-family: sans-serif;   /* Écriture propre */
-}
-button {
-  background-color: #1e293b; /* Bleu nuit pro */
-  color: white;              /* Texte blanc */
-  padding: 12px 24px;        /* Espacement intérieur */
-  border: none;              /* Supprime la bordure */
-  border-radius: 8px;        /* Angles arrondis */
-  margin-top: 20px;          /* Espace au-dessus */
-  cursor: pointer;           /* Curseur cliquable */
-} </style>
+    <meta charset="UTF-8">
+    <title>Mon Profil - CATS 3</title>
+    <style>
+      /* Style général de la page */
+      body {
+        background-color: #f8fafc; /* Gris clair moderne */
+        font-family: sans-serif;   /* Écriture propre et moderne */
+        margin: 0;
+        padding: 20px;
+      }
+
+      /* La carte blanche centrée */
+      .carte {
+        max-width: 600px;        /* Largeur maximale de la carte */
+        margin: 50px auto;       /* Centrée horizontalement, 50px d'espace en haut/bas */
+        background-color: white; /* Fond blanc */
+        padding: 40px;           /* Espace intérieur pour faire respirer le texte */
+        border-radius: 12px;     /* Angles arrondis élégants */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Ombre légère pour le relief */
+        text-align: center;      /* Centre tout le texte et les boutons à l'intérieur */
+      }
+
+      /* Titres */
+      h1 {
+        color: blue;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        color: #334155;
+        margin-top: 30px;
+      }
+
+      /* Logo */
+      img {
+        display: block;
+        margin: 0 auto 20px auto; /* Centre l'image horizontalement */
+        max-width: 150px;         /* Limite la taille du logo pour qu'il reste propre */
+        height: auto;
+        border-radius: 8px;       /* Coins légèrement arrondis */
+      }
+
+      /* Liste des objectifs (alignée à gauche pour faire propre, mais centrée dans la carte) */
+      ul {
+        display: inline-block;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+
+      li {
+        margin: 8px 0;
+      }
+
+      /* Bouton moderne */
+      button {
+        background-color: #1e293b; /* Bleu nuit professionnel */
+        color: white;              /* Texte blanc */
+        padding: 12px 24px;        /* Rembourrage intérieur */
+        border: none;              /* Supprime la bordure grise moche */
+        border-radius: 8px;        /* Angles arrondis */
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;           /* Le curseur devient une main au survol */
+        margin-top: 15px;
+        transition: background-color 0.2s; /* Effet fluide */
+      }
+
+      button:hover {
+        background-color: #334155; /* Le bouton change de couleur quand on passe dessus */
+      }
+
+      /* Lien */
+      a {
+        color: blue;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
-    <div
-class="carte">
-    <h1>Cheikh Ahmed Tidiane Sene</h1>
-    <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=CATS+3" alt="logo de l'entreprise CATS 3">
-    <p>Je veux devenir codeur pour developper des logiciels, des applications et des sites web.</p>
-    
-    <h2>Mes objectifs.</h2>
-    <ul>
-      <li>CATS 3 <strong>Tech</strong></li>
-      <li>CATS 3 <strong>Défense</strong></li>
-      <li>CATS 3 <strong>Santé</strong></li>
-    </ul>
-    
-    <p id="statut">Découvrez mon futur projet :</p>
-    <a href="https://www.cats3.com">Visiter le site de CATS 3.</a>
-    
-    <button onclick="lancerprojet()">Lancer le projet</button>
 
+    <div class="carte">
+      
+      <h1>Cheikh Ahmed Tidiane Sene</h1>
+      
+      <img src="logo-cats3.png" alt="logo de l'entreprise CATS 3">
+      
+      <p>Je veux devenir codeur pour développer des logiciels, des applications et des sites web.</p>
+      
+      <h2>Mes objectifs.</h2>
+      <ul>
+        <li>CATS 3 <strong>Tech</strong></li>
+        <li>CATS 3 <strong>Défense</strong></li>
+        <li>CATS 3 <strong>Santé</strong></li>
+      </ul>
+      
+      <p id="statut">Découvrez mon futur projet :</p>
+      <p><a href="https://www.cats3.com" target="_blank">Visiter le site de CATS 3.</a></p>
+      
+      <button onclick="lancerprojet()">Lancer le projet</button>
+
+    </div>
     <script>
       function lancerprojet() {
-        // On cible l'id "statut" et on change son texte
+        // Modifie dynamiquement le texte de la page
         document.getElementById("statut").textContent = "Le projet CATS 3 est en cours de déploiement...";
       }
     </script>
-    </div>
+    
   </body>
 </html>

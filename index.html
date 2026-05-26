@@ -2,8 +2,20 @@
 <html>
   <head>
     <title>Mon Profil</title>
-    <style>h1 {
+    <style>.carte {
+text-align: center;
+  max-width: 600px;        /* La boîte ne dépassera pas 600 pixels de large */
+  margin: 50px auto;       /* 50px d'espace en haut/bas, et CENTRÉ horizontalement */
+  background-color: white; /* Le fond de ta carte sera tout blanc */
+  padding: 30px;           /* Du rembourrage pour que le texte ne colle pas aux bords */
+  border-radius: 12px;     /* Des bords arrondis élégants */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Une ombre légère pour donner du relief */
+}h1 {
   color: blue;
+}img {
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 8px; /* Ça arrondira légèrement les coins du logo */
 }
 body {
   background-color: #f8fafc; /* Gris clair moderne */
@@ -20,7 +32,8 @@ button {
 } </style>
   </head>
   <body>
-    
+    <div
+class="carte">
     <h1>Cheikh Ahmed Tidiane Sene</h1>
     <img src="https://via.placeholder.com/150/000000/FFFFFF/?text=CATS+3" alt="logo de l'entreprise CATS 3">
     <p>Je veux devenir codeur pour developper des logiciels, des applications et des sites web.</p>
@@ -43,6 +56,6 @@ button {
         document.getElementById("statut").textContent = "Le projet CATS 3 est en cours de déploiement...";
       }
     </script>
-    
+    </div>
   </body>
 </html>
